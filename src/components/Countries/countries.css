@@ -6,3 +6,7 @@
 .country-visited{
     background-color: #17d2c3;
 }
+.visited-flag img{
+    width:150px;
+    margin-right:10px;
+}

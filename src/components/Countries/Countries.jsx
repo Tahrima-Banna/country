@@ -7,6 +7,8 @@ const Countries = ({countryPromise}) => {
     const [visitedCountries,setVisitedCountries]= useState([]);
     const [visitedFlag,setVisitedFlag]=useState([])
 
+   // const flags = country.flags.flags.png
+
     const handleCount=(country)=>{
        //console.log("handle count is clicked",country)
        const newVisited =[...visitedCountries,country]
@@ -24,13 +26,17 @@ const Countries = ({countryPromise}) => {
         <div>
         <h1>Number of  countries:{countries.length}</h1>
         <h3>Total Countries:{visitedCountries.length}</h3>
-       
-        
+         <h3>Total visited flags:{visitedFlag.length}</h3>
           <ol>
              {
               visitedCountries.map(country=><li key={country.cca3.cca3}>{country.name.common}</li>)
              }
           </ol>
+         <div className='visited-flag'>
+           {
+            visitedFlag.map((flag,index)=><img key={index} src={flag}></img>)
+           }
+         </div>
         
         <div className="countries">
           {
